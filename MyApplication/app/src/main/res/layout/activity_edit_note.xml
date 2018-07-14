@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relative">
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="295dp"
+        android:layout_height="48dp"
+        android:layout_alignBaseline="@+id/button"
+        android:layout_alignParentEnd="true"
+        android:text="Your Postion" />
+    <TextView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="标题"
+        android:gravity="center"
+        android:id="@+id/edittitle"
+        android:layout_alignTop="@+id/editTexttitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/editTexttitle"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="21dp"
+        android:layout_toRightOf="@+id/editneirong"
+        android:layout_toEndOf="@+id/edittitle" />
+
+    <LinearLayout
+        android:id="@+id/dateLiner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/edittitle"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/datecontent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="时间"
+            android:textColor="#212121"
+            android:textSize="20sp" />
+
+        <TimePicker
+            android:id="@+id/timepicker"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:layout_marginLeft="16dp"
+            android:timePickerMode="spinner">
+
+        </TimePicker>
+
+        <TextView
+            android:id="@+id/timeshower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:padding="8dp"
+            android:textColor="#212121"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/editneirong"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/dateLiner"
+        android:gravity="center"
+        android:text="内容" />
+
+    <EditText
+        android:id="@+id/editTextneirong"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editneirong"
+        android:maxLines="8" />
+
+    <Button
+        android:id="@+id/create_baocun"
+        android:textSize="24dp"
+        android:text="保存"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/create_quxiao"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:id="@+id/create_quxiao"
+        android:textSize="24dp"
+        android:text="取消"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="191dp"
+        android:text="定位" />
+</RelativeLayout>
